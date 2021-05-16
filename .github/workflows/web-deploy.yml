@@ -30,7 +30,7 @@ jobs:
           git config --global user.email gonzalomatarrubia@hotmail.com
           git config --global user.name gmatarrubia
           git status
-          git remote add origin https://${{secrets.GITHUB_TOKEN}}@github.com/gmatarrubia/dicee-flutter.git
+          git remote add origin https://gmatarrubia:${{secrets.GITHUB_TOKEN}}@github.com/gmatarrubia/${{ github.event.repository.name }}.git
           git checkout -b gh-pages
           git add --all
           git commit -m "update"
